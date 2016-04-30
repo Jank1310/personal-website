@@ -18,7 +18,9 @@ a {
 
 .container {
   width: 80%;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: #F2F2F2;
   border-top-right-radius: 12px;
   border-bottom-left-radius: 12px; }
@@ -31,7 +33,7 @@ nav {
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
-  min-height: 5rem; }
+  min-height: 2rem; }
   @media (max-width: 767px) {
     nav {
       display: none; } }
@@ -52,7 +54,7 @@ nav {
     margin: 0;
     display: flex;
     align-items: center;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
     padding-left: 6rem; }
     nav ul[role="complementary"] > li {
       display: inline-block;
@@ -101,7 +103,7 @@ header {
     padding: 0; }
   header .hello {
     max-width: 75%;
-    margin: 2rem auto 8rem;
+    margin: 3rem auto;
     background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
@@ -125,11 +127,12 @@ header {
 
 section#projects {
   max-width: 75%;
-  margin: 0 auto; }
+  margin: 5rem auto 0; }
   @media (max-width: 767px) {
     section#projects {
       max-width: 90%; } }
   section#projects h1 {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
     padding: 1rem;
     font-weight: 300;
@@ -145,7 +148,6 @@ section#projects {
   section#projects .projects {
     margin-top: 1.5rem; }
     section#projects .projects article {
-      padding-top: 4rem;
       display: flex;
       align-items: center; }
       section#projects .projects article:first-child {
@@ -157,22 +159,58 @@ section#projects {
       section#projects .projects article h3 {
         font-weight: 400;
         color: #191919;
-        margin: 0;
-        margin-bottom: 0.25rem;
+        margin: 0 0 0.25rem;
         padding: 0; }
         section#projects .projects article h3 > span.since {
           font-weight: 300;
           font-size: 0.83rem;
           color: rgba(25, 25, 25, 0.6); }
       section#projects .projects article p {
-        margin: 0;
-        margin-bottom: 0.25rem;
+        margin: 0 0 0.25rem;
         font-weight: 300;
         line-height: 1.3rem;
         color: #191919; }
       section#projects .projects article a {
         font-size: 0.9rem;
         color: rgba(25, 25, 25, 0.5);
-        transition: color .75ms; }
+        transition: color 0.75ms; }
         section#projects .projects article a:hover {
-          color: rgba(25, 25, 25, 0.8); }
+          color: #191919; }
+
+section#skills {
+  max-width: 75%;
+  margin: 5rem auto 0; }
+  @media (max-width: 767px) {
+    section#skills {
+      max-width: 90%; } }
+  section#skills h1 {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding-bottom: 0; }
+  section#skills h2 {
+    text-align: center;
+    margin: 0.3rem 0 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(25, 25, 25, 0.6); }
+  section#skills .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem; }
+    section#skills .skills-list .skill {
+      font-weight: 300;
+      color: #191919;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      background-color: rgba(255, 255, 255, 0.35);
+      border-radius: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.008), 0 2px 4px -1px rgba(0, 0, 0, 0.0075);
+      margin: 0.5rem;
+      flex: 0;
+      padding: .5rem 1rem; }

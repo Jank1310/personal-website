@@ -18,7 +18,7 @@ nav {
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
-    min-height: 5rem;
+    min-height: 2rem;
     ul[role="navigation"] {
         @include horizontal-list(2rem);
         font-size: 0.9rem;

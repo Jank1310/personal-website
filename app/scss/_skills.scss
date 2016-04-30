@@ -1,0 +1,43 @@
+section#skills {
+    max-width: 75%;
+    @include phone {
+        max-width: 90%;
+    }
+    margin: 5rem auto 0;
+    h1 {
+        text-shadow: 0 1px 1px rgba(black, 0.05);
+        text-align: center;
+        padding: 1rem;
+        font-weight: 300;
+        margin: 0;
+        padding-bottom: 0;
+    }
+    h2 {
+        text-align: center;
+        margin: 0.3rem 0 0;
+        padding: 0;
+        font-weight: 300;
+        font-size: 1rem;
+        color: rgba($font-color, 0.6);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+      .skill {
+        font-weight: 300;
+        color: $font-color;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        background-color: rgba(white, 0.35);
+        border-radius: 3px;
+        border: 1px solid rgba(black, 0.15);
+        box-shadow: 0 1px 1px 1px rgba(black, 0.008), 0 2px 4px -1px rgba(black, 0.0075);
+        margin: 0.5rem;
+        flex: 0;
+        padding: .5rem 1rem;
+      }
+    }
+}
