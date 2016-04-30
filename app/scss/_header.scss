@@ -15,19 +15,19 @@ header {
     }
     h2 {
         font-weight: 300;
-        font-size: 0.8rem;
+        font-size: 0.82rem;
+        letter-spacing: 2px;
         text-transform: uppercase;
-        margin: 0;
+        margin: 0.25rem 0 0;
         padding: 0;
     }
     .hello {
+        max-width: 75%;
         margin: 2rem auto 8rem;
         background-color: rgba(white, 0.2);
         display: flex;
         align-items: center;
-        max-width: 45rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1rem;
         box-shadow: 0 1px 1px 1px rgba(black, 0.145), 0 4px 10px -2px rgba(black, 0.05);
         @include phone {
             max-width: 90%;
