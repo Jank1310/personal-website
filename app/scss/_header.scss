@@ -47,4 +47,38 @@ header {
             }
         }
     }
+
+    ul.resume {
+        max-width: 75%;
+        margin: 3rem auto;
+        color: $font-color;
+        list-style: none;
+        font-weight: 300;
+        li {
+            display: flex;
+            text-align: left;
+            &:not(:first-child) {
+                margin-top: 2rem;
+            }
+            .content {
+                img {
+                    width: 1rem;
+                }
+            }
+            .year {
+                color: rgba($font-color, 0.8);
+                letter-spacing: 1px;
+                min-width: 10rem;
+                font-size: 0.9rem;
+                margin-right: 3rem;
+                text-align: right;
+            }
+            .location {
+                padding-top: 0.1rem;
+                font-size: 0.9rem;
+                color: rgba($font-color, 0.8);
+                display: block;
+            }
+        }
+    }
 }

@@ -32,7 +32,54 @@ a {
     border-bottom-left-radius: 12px;
 }
 
+@mixin horizontal-list($margin) {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    & > li {
+        display: inline-block;
+        margin-left: $margin/2;
+        margin-right: $margin/2;
+    }
+}
+
+@mixin social-menu {
+    @include horizontal-list(1.5rem);
+
+    a {
+        fill: white;
+        opacity: 0.6;
+        transition: opacity 75ms;
+        &:hover {
+            opacity: 1;
+        }
+        height: 1.2rem;
+        width: 1.2rem;
+        display: inline-block;
+        vertical-align: middle;
+        &.facebook {
+            svg {
+                fill: white;
+            }
+            content: url('/images/facebook.svg');
+        }
+        &.twitter {
+            content: url('/images/twitter.svg');
+        }
+        &.xing {
+            content: url('/images/xing.svg');
+        }
+        &.github {
+            content: url('/images/github.svg');
+        }
+        &.email {
+            content: url('/images/email.svg');
+        }
+    }
+}
+
 @import 'nav';
 @import 'header';
 @import 'projects';
 @import 'skills';
+@import 'contact';

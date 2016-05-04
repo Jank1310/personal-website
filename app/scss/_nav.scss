@@ -1,15 +1,5 @@
 $link-color: #4760FF;
-@mixin horizontal-list($margin) {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    & > li {
-        display: inline-block;
-        margin-right: $margin;
-    }
-}
+
 nav {
     @include phone {
         display: none;
@@ -18,42 +8,14 @@ nav {
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
-    min-height: 2rem;
     ul[role="navigation"] {
         @include horizontal-list(2rem);
         font-size: 0.9rem;
-        padding-left: 2.5rem;
+        padding-left: 2rem;
     }
+
     ul[role="complementary"] {
-        @include horizontal-list(1.5rem);
-        padding-right: 1.5rem;
-        padding-left: 6rem;
-        a {
-            fill: white;
-            opacity: 0.6;
-            transition: opacity 75ms;
-            &:hover {
-                opacity: 1;
-            }
-            height: 1.2rem;
-            width: 1.2rem;
-            display: inline-block;
-            vertical-align: middle;
-            &.facebook {
-                svg {
-                    fill: white;
-                }
-                content: url('/images/facebook.svg');
-            }
-            &.twitter {
-                content: url('/images/twitter.svg');
-            }
-            &.xing {
-                content: url('/images/xing.svg');
-            }
-            &.github {
-                content: url('/images/github.svg');
-            }
-        }
+        @include social-menu;
+        padding-right: 2rem;
     }
 }

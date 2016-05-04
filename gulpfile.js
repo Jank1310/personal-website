@@ -20,10 +20,16 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch(src.html).on('change', browserSync.reload);
 });
 
+function swallowError(error) {
+    console.error(error.toString());
+    this.emit('end');
+}
+
 // Compile sass into CSS
 gulp.task('sass', function() {
     return gulp.src(src.scss)
         .pipe(sass())
+        .on('error', swallowError)
         .pipe(gulp.dest(src.css))
         .pipe(reload({stream: true}));
 });

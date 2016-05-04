@@ -32,8 +32,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  flex-wrap: wrap;
-  min-height: 2rem; }
+  flex-wrap: wrap; }
   @media (max-width: 767px) {
     nav {
       display: none; } }
@@ -41,24 +40,21 @@ nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
     font-size: 0.9rem;
-    padding-left: 2.5rem; }
+    padding-left: 2rem; }
     nav ul[role="navigation"] > li {
       display: inline-block;
-      margin-right: 2rem; }
+      margin-left: 1rem;
+      margin-right: 1rem; }
   nav ul[role="complementary"] {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
-    padding-right: 1.5rem;
-    padding-left: 6rem; }
+    padding-right: 2rem; }
     nav ul[role="complementary"] > li {
       display: inline-block;
-      margin-right: 1.5rem; }
+      margin-left: 0.75rem;
+      margin-right: 0.75rem; }
     nav ul[role="complementary"] a {
       fill: white;
       opacity: 0.6;
@@ -79,6 +75,8 @@ nav {
         content: url("/images/xing.svg"); }
       nav ul[role="complementary"] a.github {
         content: url("/images/github.svg"); }
+      nav ul[role="complementary"] a.email {
+        content: url("/images/email.svg"); }
 
 header {
   text-align: center;
@@ -124,6 +122,31 @@ header {
         header .hello p {
           padding-left: 1rem;
           line-height: 1.2rem; } }
+  header ul.resume {
+    max-width: 75%;
+    margin: 3rem auto;
+    color: #191919;
+    list-style: none;
+    font-weight: 300; }
+    header ul.resume li {
+      display: flex;
+      text-align: left; }
+      header ul.resume li:not(:first-child) {
+        margin-top: 2rem; }
+      header ul.resume li .content img {
+        width: 1rem; }
+      header ul.resume li .year {
+        color: rgba(25, 25, 25, 0.8);
+        letter-spacing: 1px;
+        min-width: 10rem;
+        font-size: 0.9rem;
+        margin-right: 3rem;
+        text-align: right; }
+      header ul.resume li .location {
+        padding-top: 0.1rem;
+        font-size: 0.9rem;
+        color: rgba(25, 25, 25, 0.8);
+        display: block; }
 
 section#projects {
   max-width: 75%;
@@ -196,6 +219,7 @@ section#skills {
     padding: 0;
     font-weight: 300;
     font-size: 1rem;
+    line-height: 1.4rem;
     color: rgba(25, 25, 25, 0.6); }
   section#skills .skills-list {
     display: flex;
@@ -214,3 +238,58 @@ section#skills {
       margin: 0.5rem;
       flex: 0;
       padding: .5rem 1rem; }
+
+section#contact {
+  max-width: 75%;
+  margin: 5rem auto 0; }
+  @media (max-width: 767px) {
+    section#contact {
+      max-width: 90%; } }
+  section#contact h1 {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding-bottom: 0; }
+  section#contact h2 {
+    text-align: center;
+    margin: 0.3rem 0 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: rgba(25, 25, 25, 0.6); }
+  section#contact ul[role="complementary"] {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center; }
+    section#contact ul[role="complementary"] > li {
+      display: inline-block;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem; }
+    section#contact ul[role="complementary"] a {
+      fill: white;
+      opacity: 0.6;
+      transition: opacity 75ms;
+      height: 1.2rem;
+      width: 1.2rem;
+      display: inline-block;
+      vertical-align: middle; }
+      section#contact ul[role="complementary"] a:hover {
+        opacity: 1; }
+      section#contact ul[role="complementary"] a.facebook {
+        content: url("/images/facebook.svg"); }
+        section#contact ul[role="complementary"] a.facebook svg {
+          fill: white; }
+      section#contact ul[role="complementary"] a.twitter {
+        content: url("/images/twitter.svg"); }
+      section#contact ul[role="complementary"] a.xing {
+        content: url("/images/xing.svg"); }
+      section#contact ul[role="complementary"] a.github {
+        content: url("/images/github.svg"); }
+      section#contact ul[role="complementary"] a.email {
+        content: url("/images/email.svg"); }
