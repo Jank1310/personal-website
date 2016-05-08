@@ -134,14 +134,15 @@ header {
       header ul.resume li:not(:first-child) {
         margin-top: 2rem; }
       header ul.resume li .content img {
-        width: 1rem; }
+        width: 0.8rem; }
       header ul.resume li .year {
         color: rgba(25, 25, 25, 0.8);
         letter-spacing: 1px;
         min-width: 10rem;
         font-size: 0.9rem;
         margin-right: 3rem;
-        text-align: right; }
+        text-align: right;
+        line-height: 1.1rem; }
       header ul.resume li .location {
         padding-top: 0.1rem;
         font-size: 0.9rem;
@@ -226,7 +227,7 @@ section#skills {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 1rem; }
-    section#skills .skills-list .skill {
+    section#skills .skills-list__skill {
       font-weight: 300;
       color: #191919;
       font-size: 0.9rem;
